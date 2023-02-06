@@ -1,0 +1,34 @@
+{
+  "products":[
+     {
+        "id":100,
+        "name":"coffee",
+        "price":2.5,
+        "description":"the best coffee on planet"
+     },
+     {
+        "id":101,
+        "name":"tea",
+        "price":1.8,
+        "description":"the best tea on planet"
+     },
+     {
+        "id":102,
+        "name":"coke",
+        "price":2.9,
+        "description":"the best coke on planet"
+     },
+     {
+        "id":103,
+        "name":"apple",
+        "price":1.2,
+        "description":"the best organic apple on planet"
+     },
+     {
+        "id":104,
+        "name":"strawberry",
+        "price":3.2,
+        "description":"the best organic strawberry on planet"
+     }
+  ]
+}
