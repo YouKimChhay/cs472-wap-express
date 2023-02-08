@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/product.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+  </head>
+  <body>
+    <h1>Online Shopping</h1>
+    <ul>
+      <li><a href="/shoppingcart">View Shopping Cart</a></li>
+    </ul>
+    <h2>View Products</h2>
+    <div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+        <% for(item of products) { %>
+          <tr>
+            <td><%= item.id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.price %></td>
+            <td><%= item.description %></td>
+          </tr>
+        <% } %>
+      </table>
+    </div>
+    <div id="formDiv">
+      <form action="/addToCart" method="post" id="addToCart">
+        <fieldset>
+          <legend>Add to Cart</legend>
+          <label for="pid">Product ID:</label>
+          <input id="pid" name="pid" type="number">
+          <label for="quantity">Quantity:</label>
+          <input id="quantity" name="quantity" type="number" value="1">
+          <input id="btn" type="submit" value="add to cart">
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <p id="msg"><%= message%></p>
+    </div>
+  </body>
+</html>
